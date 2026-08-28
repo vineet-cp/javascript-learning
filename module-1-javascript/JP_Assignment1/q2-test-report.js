@@ -1,5 +1,6 @@
-//node .\module-1-javascript\JP_Assignment1\q2-test-report.js
+
 // Exercise 2 08/24/2026
+// Checking in on 2/28/2026
 console.log("-".repeat(5) + " TEST EXECUTION REPORT " + "-".repeat(5));
 console.log("Application: Demo Shopping App")
 console.log("Passed: 18")
