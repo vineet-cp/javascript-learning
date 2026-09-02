@@ -1,7 +1,8 @@
 
 // Exercise 2 08/24/2026
-// Checking in on 2/28/2026
+// Checking in on 2/28/2026 
 console.log("-".repeat(5) + " TEST EXECUTION REPORT " + "-".repeat(5));
+console.log(typeof null)
 console.log("Application: Demo Shopping App")
 console.log("Passed: 18")
 console.log("Failed: 5")
