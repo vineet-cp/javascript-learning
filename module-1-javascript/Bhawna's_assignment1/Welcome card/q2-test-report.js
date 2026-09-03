@@ -1,0 +1,7 @@
+console.log("----- TEST EXECUTION REPORT -----")
+console.log("Application: Demo Shopping App")
+console.log("Passed: 18")
+console.log("Failed: 5")
+console.log("Skipped: 2")
+console.log("Total: 25")
+console.log("---------------------------------")

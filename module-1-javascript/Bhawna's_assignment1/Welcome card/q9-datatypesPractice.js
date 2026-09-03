@@ -1,0 +1,14 @@
+let name = "Bhawna";
+let age = 25;
+let isStudent = true;
+let isVisible = true;
+let username;
+console.log(username);
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(typeof isVisible);
+console.log(typeof username);
+let data = null;
+console.log(typeof data);
+console.log(data);
