@@ -7,5 +7,7 @@ let d = b / a;
 console.log(d);
 let e = a % b;
 console.log(e);
+let f = 2**5;
+console.log(f);
 
 console.log("**********End of Simple Math with Variables***********");
