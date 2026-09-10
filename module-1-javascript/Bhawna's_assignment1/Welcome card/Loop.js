@@ -63,12 +63,72 @@ let reverse = 0;
 
 while (num > 0) {
     let digit = num % 10;
+    
     sum += digit;
-    count++;
+    
     reverse = reverse * 10 + digit;
-    num = Math.floor(num / 10);
+    num = Math.floor(num/10);
+    count++;
 }
 
 console.log("Sum of digits = " + sum);
 console.log("Number of digits = " + count);
 console.log("Reversed number = " + reverse);
+
+
+//factorial of a number
+let number = 6;
+let factorial = 1;
+for (let i = 1; i <= number; i++) {
+    factorial *= i;
+}
+console.log("Factorial of " + number + " = " + factorial);
+
+
+//Sum of Even Numbers Only
+let sumEven = 0;
+for (let i = 2; i <= 100; i += 2) {
+    sumEven += i;
+}
+console.log("Sum of even numbers from 2 to 100 = " + sumEven);
+
+//#8. Number Analysis - Digits, Sum and Reverse
+
+
+//9.  Palindrome Number
+let palindrome = 1271;
+let original = palindrome;
+let reversal = 0;
+
+while (palindrome > 0) {
+    reversal = reversal * 10 + palindrome % 10;
+    palindrome = Math.floor(palindrome / 10);
+}
+
+if (original === reversal) {
+    console.log(original + " is a palindrome.");
+} else {
+    console.log(original + " is not a palindrome.");
+}
+
+
+// print numbers from 2 to 20 using do while loop
+let i = 2;
+do {
+    console.log(i);
+    i++;
+} while (i <= 20);
+
+
+//#10. Largest Digit in a Number.
+
+let numberToCheck = 672941;
+let largestDigit = 0;
+while (numberToCheck > 0) {
+    let digit = numberToCheck % 10;
+    if (digit > largestDigit) {
+        largestDigit = digit;
+    }
+    numberToCheck = Math.floor(numberToCheck / 10);
+}
+console.log("Largest digit in the number is: " + largestDigit);

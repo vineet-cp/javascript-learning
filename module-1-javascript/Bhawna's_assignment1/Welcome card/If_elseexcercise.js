@@ -80,4 +80,53 @@ if (bill > 1500){
 console.log("final bill = Rs. "+ bill)
 console.log("===========================================")
 
+//Loan Eligibility
+let salary = 45000;
+let creditScore  = 720;
+let existingEMI = 12000;
 
+if (salary <=30000 && creditScore >= 700 && existingEMI < salary * 0.4) {
+    console.log("Loan Eligible");
+}
+else {
+    console.log("Loan Not Eligible");
+}
+console.log("====End of Loan Eligibility Check====");
+
+//Cab fare calculator
+let distance = 18;
+let isNight = true;
+let totalFare;
+
+if (distance <= 5) {
+    totalFare = 50;
+}
+else {
+    totalFare = 50 + (distance - 5) * 12;
+}
+
+if (isNight && totalFare > 150) {
+    totalFare += totalFare * 0.20;
+}
+
+console.log("Final fare = Rs. " + totalFare);
+
+//#8. Restaurant Bill and Free Dessert
+let billAmount = 2400;
+let memberOfPeople = 4;
+let isMember = false;
+let restaurantDiscount = 0;
+
+if (billAmount > 2000  && isMember == true) {
+ discount = billAmount*20/100
+}
+
+else if
+(billAmount <= 2000){
+discount = billAmount*10/100
+}
+ else {
+    restaurantDiscount = 0;
+ }
+ 
+ 
