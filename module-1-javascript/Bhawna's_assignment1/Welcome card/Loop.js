@@ -132,3 +132,6 @@ while (numberToCheck > 0) {
     numberToCheck = Math.floor(numberToCheck / 10);
 }
 console.log("Largest digit in the number is: " + largestDigit);
+
+
+//11. Break and Continue statements
