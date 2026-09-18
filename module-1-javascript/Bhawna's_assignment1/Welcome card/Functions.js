@@ -311,3 +311,107 @@ function processSalary(baseSalary, bonusCallback, taxCallback, displayCallback) 
     }
 );
    
+
+
+
+// ...existing code...
+
+function fulfilOrder(order, validateCallback, paymentCallback, dispatchCallback, failureCallback) {
+    const isValid = validateCallback(order);
+
+    if (!isValid) {
+        return failureCallback(order);
+    }
+
+    const transactionMessage = paymentCallback(order.quantity * order.price);
+    return dispatchCallback(transactionMessage, order);
+}
+
+// Anonymous callbacks only
+const validOrder = { item: "Laptop", quantity: 2, price: 1000 };
+
+fulfilOrder(
+    validOrder,
+    function (order) {
+        return order.quantity > 0 && order.price > 0;
+    },
+    function (amount) {
+        return "Payment successful: $" + amount;
+    },
+    function (transactionMessage, order) {
+        console.log(transactionMessage + " | Dispatching " + order.item);
+    },
+    function (order) {
+        console.log("Order failed validation for " + order.item);
+    }
+);
+
+const invalidOrder = { item: "Mouse", quantity: 0, price: 200 };
+
+fulfilOrder(
+    invalidOrder,
+    function (order) {
+        return order.quantity > 0 && order.price > 0;
+    },
+    function (amount) {
+        return "Payment successful: $" + amount;
+    },
+    function (transactionMessage, order) {
+        console.log(transactionMessage + " | Dispatching " + order.item);
+    },
+    function (order) {
+        console.log("Order failed validation for " + order.item);
+    }
+);
+
+// ...Order fulfilment sequence...
+
+
+function fulfilOrder(order, validateCallback, paymentCallback, dispatchCallback, failureCallback) {
+    const isValid = validateCallback(order);
+
+    if (!isValid) {
+        return failureCallback(order);
+    }
+
+    const transactionMessage = paymentCallback(order.quantity * order.price);
+    return dispatchCallback(transactionMessage, order);
+}
+
+// Anonymous callbacks only
+const validOrd = { item: "Laptop", quantity: 2, price: 1000 };
+
+fulfilOrder(
+    validOrd,
+    function (order) {
+        return order.quantity > 0 && order.price > 0;
+    },
+    function (amount) {
+        return "Payment successful: $" + amount;
+    },
+    function (transactionMessage, order) {
+        console.log(transactionMessage + " | Dispatching " + order.item);
+    },
+    function (order) {
+        console.log("Order failed validation for " + order.item);
+    }
+);
+
+const invalidOrd = { item: "Mouse", quantity: 0, price: 200 };
+
+fulfilOrder(
+    invalidOrd,
+    function (order) {
+        return order.quantity > 0 && order.price > 0;
+    },
+    function (amount) {
+        return "Payment successful: $" + amount;
+    },
+    function (transactionMessage, order) {
+        console.log(transactionMessage + " | Dispatching " + order.item);
+    },
+    function (order) {
+        console.log("Order failed validation for " + order.item);
+    }
+);
+
