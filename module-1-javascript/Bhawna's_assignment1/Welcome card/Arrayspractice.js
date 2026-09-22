@@ -88,3 +88,76 @@ console.log(subjects);
 
 marks[3] = 65;
 console.log(marks);
+
+
+
+
+//Filter method practice
+let ages = [12,17,20,25,30,15,18];
+let adults = ages.filter(function(age){
+    return age >= 18;
+});
+console.log(adults);
+
+
+//Filter method practice
+let marks2 = [34,67,30,22,49,91]
+let passmarks = marks2.filter(function(mark){
+    return mark >= 40;
+});
+console.log(passmarks);
+
+//find method practice
+let numbers4 = [10,20,30,40,50];        
+let foundNumber = numbers4.find(function(num){
+    return num === 30;
+});
+console.log(foundNumber);   
+
+
+
+//Find all products that are in stock using filter() method
+let products = [
+    {name:"Laptop", price:50000, inStock:true},
+    {name:"Mobile", price:20000, inStock:false},
+    {name:"Tablet", price:30000, inStock:true},
+    {name:"Headphones", price:2000, inStock:false}
+];
+let inStockProducts = products.filter(function(x){
+    return x.inStock === true;
+});
+console.log(inStockProducts);
+
+//Create an array containing only products names using map() method
+let productNames = products.map(function(x){
+    return x.name;
+});
+console.log(productNames);
+
+// Find the first product costing more than 10000 using find() method
+let expensiveProduct = products.find(function(x){
+    return x.price > 10000;
+});
+console.log(expensiveProduct);
+
+// find the sum of all the products using reduce() method
+let totalPrice = products.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue.price;
+}, 0);
+console.log(totalPrice);
+
+let total  =  products.reduce(function(sum,products){
+    return sum + products.price;},0);               
+
+
+//Consider only those products in stock and give 20% discount  to each and calculates total amount that customer needs to pay using filter, map and reduce() method
+let totalAmount = products.filter(function(x){
+    return x.inStock === true; 
+}).map(function(product){
+    return product.price - product.price*0.2;
+}).reduce(function(total, price){
+    return total + price;
+}, 0);
+console.log(totalAmount);
+
+
